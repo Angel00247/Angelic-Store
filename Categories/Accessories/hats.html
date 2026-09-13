@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../e-shop.css">
+    <script src="../../script.js" defer></script>
+    <title>Accessories</title>
+</head>
+
+<body style="background-image: url('../../Backgrounds & Logos/background4.jpg'); background-size: cover; background-position: center;">
+    <a href="../cart.html" class="cart-link">🛒<span id="cart-count">0</span></a>
+    <a href="../wishlist.html" class="wishlist-link">♡<span id="wishlist-count">0</span></a>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="bags.html">Bags</a></li>
+            <li><a href="belts.html">Belts</a></li>
+            <li><a href="jewelry.html">Jewelry</a></li>
+            <li><a href="accessories.html">All Accessories</a></li>
+            <li><a href="../../index.html">Return to Main Page</a></li>
+        </ul>
+    </div>
+
+    <h1>Menu</h1>
+    <header class="epikefalida"><b>Hats</b></header>
+
+    <ul class="rouxa">
+        <li>
+            <button onclick="openTable('../../Products/Accessories/hat1.jpg', '47 BRAND Clean Up Cap - NY', '$39.95')">
+                <img src="../../Products/Accessories/hat1.jpg"><span>47 BRAND Clean Up Cap - NY</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Accessories/hat2.jpg', 'GARAGE Branded Cap', '$29.95')">
+                <img src="../../Products/Accessories/hat2.jpg"><span>GARAGE Branded Cap</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Accessories/hat3.jpg', '47 BRAND Clean Up Cap - NY', '$39.95')">
+                <img src="../../Products/Accessories/hat3.jpg"><span>47 BRAND Clean Up Cap - NY</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Accessories/hat4.jpg', 'GARAGE Branded Cap', '$29.95')">
+                <img src="../../Products/Accessories/hat4.jpg"><span>GARAGE Branded Cap</span>
+            </button>
+        </li>
+    </ul>
+
+    <div id="tableBox" class="table">
+        <div class="table-content">
+            <button class="close" onclick="closeTable()">X</button>
+            <button id="wishlist-btn" class="wishlist-btn" onclick="toggleWishlist()">♡</button>
+
+            <table>
+                <tr>
+                    <td rowspan="3"><img src="" id="modalImg" class="icon2"></td>
+                    <td>
+                        <p class="onoma"><b id="modalName"></b></p>
+                        <br>
+                        <p class="aksia" id="modalPrice"></p>
+                        <br>
+                        <label for="modal-size">Select Size:</label>
+                        <br>
+                        <select id="modal-size" required>
+                            <option value="One-Size">One-Size</option>
+                        </select>
+                        <br><br>
+                        <button class="agora" onclick="checkSelection(event)">Add to Cart</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">
+            All the products on this page are from <b><i>Garage Clothing</i></b> and are used solely for a student project.
+        </p>
+    </footer>
+</body>
+
+</html>

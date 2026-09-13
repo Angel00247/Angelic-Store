@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../e-shop.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="../script.js" defer></script>
+    <title>Order Confirmation</title>
+</head>
+
+<body style="background-image: url('../Backgrounds & Logos/background8.jpg'); background-size: cover; background-position: center;">
+    <button onclick="window.history.back()" class="back"><b>Back</b></button>
+    <header class="epikefalida"><b>✨ ORDER CONFIRMED! ✨</b></header>
+    <div class="thank-you-box">
+        <h2 id="thanks-name" class="thanks-name">Thank you!</h2>
+        <p class="thank-you-msg">
+            A confirmation email has been sent to <br>
+            <span id="order-email" class="order-email"></span>
+        </p>
+        <div class="order-info-details">
+            <p><b>Order ID:</b><span id="order-id"></span></p>
+            <p><b>Shipping Address:</b><span id="order-address"></span></p>
+        </div>
+        <br><br>
+    </div>
+    <a href="../index.html" class="home-btn">Return to Main Page</a>
+</body>
+
+</html>

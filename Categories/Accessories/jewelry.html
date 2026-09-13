@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../e-shop.css">
+    <script src="../../script.js" defer></script>
+    <title>Accessories</title>
+</head>
+
+<body style="background-image: url('../../Backgrounds & Logos/background4.jpg'); background-size: cover; background-position: center;">
+    <a href="../cart.html" class="cart-link">🛒<span id="cart-count">0</span></a>
+    <a href="../wishlist.html" class="wishlist-link">♡<span id="wishlist-count">0</span></a>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="bags.html">Bags</a></li>
+            <li><a href="hats.html">Hats</a></li>
+            <li><a href="belts.html">Belts</a></li>
+            <li><a href="accessories.html">All Accessories</a></li>
+            <li><a href="../../index.html">Return to Main Page</a></li>
+        </ul>
+    </div>
+
+    <h1>Menu</h1>
+    <header class="epikefalida"><b>Jewelry</b></header>
+
+    <ul class="rouxa">
+        <li>
+            <button onclick="openTable('../../Products/Accessories/jewelry1.jpg', 'Set of 4 Angel and Cherry Pendant Necklaces', '$24.95')">
+                <img src="../../Products/Accessories/jewelry1.jpg"><span>Set of 4 Angel and Cherry Pendant Necklaces</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Accessories/jewelry2.jpg', '3 Pack Textured Hoop Earrings', '$19.95')">
+                <img src="../../Products/Accessories/jewelry2.jpg"><span>3 Pack Textured Hoop Earrings</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Accessories/jewelry3.jpg', '2 Pack Wave Cuffs', '$24.95')">
+                <img src="../../Products/Accessories/jewelry3.jpg"><span>2 Pack Wave Cuffs</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Accessories/jewelry4.jpg', 'Snake Chain Ring', '$14.95')">
+                <img src="../../Products/Accessories/jewelry4.jpg"><span>Snake Chain Ring</span>
+            </button>
+        </li>
+    </ul>
+
+    <div id="tableBox" class="table">
+        <div class="table-content">
+            <button class="close" onclick="closeTable()">X</button>
+            <button id="wishlist-btn" class="wishlist-btn" onclick="toggleWishlist()">♡</button>
+
+            <table>
+                <tr>
+                    <td rowspan="3"><img src="" id="modalImg" class="icon2"></td>
+                    <td>
+                        <p class="onoma"><b id="modalName"></b></p>
+                        <br>
+                        <p class="aksia" id="modalPrice"></p>
+                        <br>
+                        <label for="modal-size">Select Size:</label>
+                        <br>
+                        <select id="modal-size" required>
+                            <option value="One-Size">One-Size</option>
+                        </select>
+                        <br><br>
+                        <button class="agora" onclick="checkSelection(event)">Add to Cart</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">
+            All the products on this page are from <b><i>Garage Clothing</i></b> and are used solely for a student project.
+        </p>
+    </footer>
+</body>
+
+</html>

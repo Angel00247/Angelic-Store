@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../e-shop.css">
+    <script src="../../script.js" defer></script>
+    <title>Shoes</title>
+</head>
+
+<body style="background-image: url('../../Backgrounds & Logos/background3.jpg'); background-size: cover; background-position: center;">
+    <a href="../cart.html" class="cart-link">🛒<span id="cart-count">0</span></a>
+    <a href="../wishlist.html" class="wishlist-link">♡<span id="wishlist-count">0</span></a>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="sneakers.html">Sneakers</a></li>
+            <li><a href="heels.html">Heels</a></li>
+            <li><a href="slippers.html">Slippers</a></li>
+            <li><a href="shoes.html">All Shoes</a></li>
+            <li><a href="../../index.html">Return to Main Page</a></li>
+        </ul>
+    </div>
+
+    <h1>Menu</h1>
+    <header class="epikefalida"><b>Boots</b></header>
+
+    <ul class="rouxa">
+        <li>
+            <button onclick="openTable('../../Products/Shoes/boots1.jpg', 'Maxine Black Lace', '$199.95')">
+                <img src="../../Products/Shoes/boots1.jpg"><span>Maxine Black Lace</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Shoes/boots2.jpg', 'Icon Dark Cherry', '$199.95')">
+                <img src="../../Products/Shoes/boots2.jpg"><span>Icon Dark Cherry</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Shoes/boots3.jpg', 'Vinny Ostrich Turquoise Leather', '$189.95')">
+                <img src="../../Products/Shoes/boots3.jpg"><span>Vinny Ostrich Turquoise Leather</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Shoes/boots4.jpg', 'Riggs Floral Multi Patches', '$209.95')">
+                <img src="../../Products/Shoes/boots4.jpg"><span>Riggs Floral Multi Patches</span>
+            </button>
+        </li>
+    </ul>
+
+    <div id="tableBox" class="table">
+        <div class="table-content">
+            <button class="close" onclick="closeTable()">X</button>
+            <button id="wishlist-btn" class="wishlist-btn" onclick="toggleWishlist()">♡</button>
+
+            <table>
+                <tr>
+                    <td rowspan="3"><img src="" id="modalImg" class="icon2"></td>
+                    <td>
+                        <p class="onoma"><b id="modalName"></b></p>
+                        <br>
+                        <p class="aksia" id="modalPrice"></p>
+                        <br>
+                        <label for="modal-size">Select Size:</label>
+                        <br>
+                        <select id="modal-size" required>
+                            <option value="" disabled selected>Select Size:</option>
+                            <option value="5">5</option>
+                            <option value="5.5">5.5</option>
+                            <option value="6">6</option>
+                            <option value="6.5">6.5</option>
+                            <option value="7">7</option>
+                            <option value="7.5">7.5</option>
+                            <option value="8">8</option>
+                            <option value="8.5">8.5</option>
+                            <option value="9">9</option>
+                            <option value="9.5">9.5</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                        <br><br>
+                        <button class="agora" onclick="checkSelection(event)">Add to Cart</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">
+            All the products on this page are from <b><i>Steve Madden</i></b> and are used solely for a student project.
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../../e-shop.css">
+    <script src="../../script.js" defer></script>
+    <title>Tops</title>
+</head>
+
+<body style="background-image: url('../../Backgrounds & Logos/background1.jpg'); background-size: cover; background-position: center;">
+    <a href="../cart.html" class="cart-link">🛒<span id="cart-count">0</span></a>
+    <a href="../wishlist.html" class="wishlist-link">♡<span id="wishlist-count">0</span></a>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="t-shirts.html">T-Shirts</a></li>
+            <li><a href="sweatshirts.html">Sweatshirts</a></li>
+            <li><a href="hoodies.html">Hoodies</a></li>
+            <li><a href="sleeveless.html">Sleeveless Tops</a></li>
+            <li><a href="../../index.html">Return to Main Page</a></li>
+        </ul>
+    </div>
+
+    <h1>Menu</h1>
+    <header class="epikefalida"><b>All Tops</b></header>
+
+    <ul class="rouxa">
+        <li>
+            <button onclick="openTable('../../Products/Tops/t-shirt1.jpg', 'Sleek Sweetheart T-Shirt', '$32.95')">
+                <img src="../../Products/Tops/t-shirt1.jpg"><span>Sleek Sweetheart T-Shirt</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/t-shirt2.jpg', 'StretchTerry™ Off Shoulder Top', '$49.95')">
+                <img src="../../Products/Tops/t-shirt2.jpg"><span>StretchTerry™ Off Shoulder Top</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/t-shirt3.jpg', 'Fluid Crewneck T-Shirt', '$36.95')">
+                <img src="../../Products/Tops/t-shirt3.jpg"><span>Fluid Crewneck T-Shirt</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/t-shirt4.jpg', 'Sleek Short Sleeve Polo Top', '$39.95')">
+                <img src="../../Products/Tops/t-shirt4.jpg"><span>Sleek Short Sleeve Polo Top</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sweatshirt1.jpg', 'SoftTerry™ Off Shoulder Sweatshirt', '$64.95')">
+                <img src="../../Products/Tops/sweatshirt1.jpg"><span>SoftTerry™ Off Shoulder Sweatshirt</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sweatshirt2.jpg', 'SoftTerry™ Rib Off Shoulder Sweater', '$64.95')">
+                <img src="../../Products/Tops/sweatshirt2.jpg"><span>SoftTerry™ Rib Off Shoulder Sweater</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sweatshirt3.jpg', 'SoftTerry™ Off Shoulder Sweatshirt', '$64.95')">
+                <img src="../../Products/Tops/sweatshirt3.jpg"><span>SoftTerry™ Off Shoulder Sweatshirt</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sweatshirt4.jpg', 'SoftTerry Foldover Off Shoulder Sweatshirt', '$59.95')">
+                <img src="../../Products/Tops/sweatshirt4.jpg"><span>SoftTerry Foldover Off Shoulder Sweatshirt</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/hoodie1.jpg', 'UltraFleece Raglan Hoodie', '$69.95')">
+                <img src="../../Products/Tops/hoodie1.jpg"><span>UltraFleece Raglan Hoodie</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/hoodie2.jpg', 'UltraFleece Hoodie', '$79.95')">
+                <img src="../../Products/Tops/hoodie2.jpg"><span>UltraFleece Hoodie</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/hoodie3.jpg', 'UltraFleece Hoodie', '$69.95')">
+                <img src="../../Products/Tops/hoodie3.jpg"><span>UltraFleece Hoodie</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/hoodie4.jpg', 'UltraFleece Half Zip Sweatshirt', '$69.95')">
+                <img src="../../Products/Tops/hoodie4.jpg"><span>UltraFleece Half Zip Sweatshirt</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sleeveless1.jpg', 'Plunge Tie Front Halter', '$39.95')">
+                <img src="../../Products/Tops/sleeveless1.jpg"><span>Plunge Tie Front Halter</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sleeveless2.jpg', 'Ally Mesh Peekaboo Bustier', '$59.95')">
+                <img src="../../Products/Tops/sleeveless2.jpg"><span>Ally Mesh Peekaboo Bustier</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sleeveless3.jpg', 'Active Layered Tank Top', '$49.95')">
+                <img src="../../Products/Tops/sleeveless3.jpg"><span>Active Layered Tank Top</span>
+            </button>
+        </li>
+        <li>
+            <button onclick="openTable('../../Products/Tops/sleeveless4.jpg', 'Active Y-Back Tank Top', '$44.95')">
+                <img src="../../Products/Tops/sleeveless4.jpg"><span>Active Y-Back Tank Top</span>
+            </button>
+        </li>
+    </ul>
+
+    <div id="tableBox" class="table">
+        <div class="table-content">
+            <button class="close" onclick="closeTable()">X</button>
+            <button id="wishlist-btn" class="wishlist-btn" onclick="toggleWishlist()">♡</button>
+
+            <table>
+                <tr>
+                    <td rowspan="3"><img src="" id="modalImg" class="icon2"></td>
+                    <td>
+                        <p class="onoma"><b id="modalName"></b></p>
+                        <br>
+                        <p class="aksia" id="modalPrice"></p>
+                        <br>
+                        <label for="modal-size">Select Size:</label>
+                        <br>
+                        <select id="modal-size" required>
+                            <option value="" disabled selected>Select Size:</option>
+                            <option value="XS">XS</option>
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                        </select>
+                        <br><br>
+                        <button class="agora" onclick="checkSelection(event)">Add to Cart</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+
+    <footer>
+        <p class="disclaimer">
+            All the products on this page are from <b><i>Garage Clothing</i></b> and are used solely for a student project.
+        </p>
+    </footer>
+</body>
+
+</html>

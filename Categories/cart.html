@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../e-shop.css">
+    <script src="../script.js" defer></script>
+    <title>Cart</title>
+</head>
+
+<body style="background-image: url('../Backgrounds & Logos/background6.jpg'); background-size: cover; background-position: center;">
+    <button onclick="window.history.back()" class="back"><b>Back</b></button>
+    <a href="wishlist.html" class="wishlist2">♡</a>
+    <header class="epikefalida"><b>Cart</b></header>
+    <div class="cart-container">
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+            <h2>Order Summary</h2>
+            <div class="summary-row"><span>Subtotal: </span><span id="subtotal">$0.00</span></div>
+            <div class="summary-row"><span>Shipping: </span><span id="shipping">$9.00</span></div>
+            <p class="shipping-note">*Free shipping on orders over $75</p>
+            <hr>
+            <div class="summary-row total"><span>Total: </span><span id="total">$0.00</span></div>
+            <button id="checkout" class="checkout" onclick="openCheckout()">Checkout</button>
+        </div>
+    </div>
+
+    <div id="checkoutModal" class="tableBox">
+        <div class="checkout-content">
+            <button class="close" onclick="closeCheckout()">X</button>
+            <h2 class="checkout-title">PAYMENT</h2>
+
+            <form id="payment-form" onsubmit="handlePayment(event)">
+                <div class="form-group">
+                    <laber for="checkout-title">Client Details</laber>
+                    <input type="text" id="client-name" class="cyber-input" placeholder="Full Name">
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="pay-method" value="card" checked onclick="toggleCardFields(true)">Cyber Card</label>
+                        <label><input type="radio" name="pay-method" value="cod" onclick="toggleCardFields(false)">Cash on Delivery</label>
+                    </div>
+                </div>
+
+                <div id="card-fields">
+                    <input type="text" id="card-num" class="cyber-input" placeholder="Card Number (16 digits)" maxlength="19">
+
+                    <div class="card-row">
+                        <input type="text" id="card-exp" class="cyber-input" placeholder="MM/YY" maxlength="5">
+                        <input type="text" id="card-cvv" class="cyber-input" placeholder="CVV" maxlength="3">
+                    </div>
+
+                    <p class="card-warning">*Please do not enter your real card details.</p>
+                </div>
+
+                <div class="billing-details">
+                    <div class="billing-row">
+                        <input type="text" id="client-country" class="cyber-input" placeholder="Country">
+                        <input type="text" id="client-city" class="cyber-input" placeholder="City">
+                    </div>
+                    <div class="billing-row">
+                        <input type="text" id="client-street" class="cyber-input" placeholder="Street Address">
+                        <input type="email" id="client-email" class="cyber-input" placeholder="Email Address">
+                    </div>
+                </div>
+
+                <div class="checkout-total-box">
+                    <p>Total Amount: <span id="checkout-total-price">$0.00</span></p>
+                </div>
+
+                <button type="submit" class="checkout-submit-btn">COMPLETE ORDER</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
